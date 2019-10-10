@@ -12,6 +12,16 @@ public class Auto {
         preis = neuerPreis;
     }
     
+    // Drucke die Daten des Autos auf den Bildschirm
+    public void druckeSchild() {
+        System.out.println(
+            "Zu verkaufen\nMarke: " +
+            gibMarke() + ", " +
+            "Kennzeichen: " +
+            gibKennzeichen()
+        );
+    }
+    
     public String gibMarke() {
         return marke;
     }

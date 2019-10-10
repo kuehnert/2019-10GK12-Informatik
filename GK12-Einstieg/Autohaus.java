@@ -7,19 +7,12 @@ public class Autohaus {
         car3 = new Auto("Kiwi", "OP A-83", 10, 240000);
     }
 
-    public void druckeSchild(Auto a) {
-        System.out.println(
-            "Zu verkaufen\nMarke: " +
-            a.gibMarke() + ", " +
-            "Kennzeichen: " +
-            a.gibKennzeichen()
-        );
-    }
-
+    // Ändere diese Methode, sodass sie druckeSchild von Auto
+    // verwendet
     public void druckeAlleSchilder() {
-        druckeSchild(car1);
-        druckeSchild(car2);
-        druckeSchild(car3);
+        car1.druckeSchild();
+        car2.druckeSchild();
+        car3.druckeSchild();
     }
 
     public void druckeGesamtpreis() {
