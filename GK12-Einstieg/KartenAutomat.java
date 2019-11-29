@@ -58,8 +58,20 @@ public class KartenAutomat {
         if (wechselgeld > 0) {
             System.out.println("Sie bekommen noch " + wechselgeld 
                 + " € zurück.");
+            
             // TODO: Gib Wechselgeld in echten Scheinen/Münzen
             // gestückelt zurück
+            // 100, 50, 20, 10, 5, 2, 1
+            while (wechselgeld >= 100) {
+                System.out.println("[100 €]");
+                wechselgeld = wechselgeld - 100;
+            }
+
+            while (wechselgeld >= 50) {
+                System.out.println("[50 €]");
+                wechselgeld = wechselgeld - 50;
+            }
+
         }
     }
 
