@@ -1,4 +1,4 @@
-public class HalloWelt {
+public class GK12 {
     public void gruesse() {
         System.out.println("Hallo, Welt!");
     }

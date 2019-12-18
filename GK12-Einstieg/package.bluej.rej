@@ -1,0 +1,28 @@
+diff a/GK12-Einstieg/package.bluej b/GK12-Einstieg/package.bluej	(rejected hunks)
+@@ -5,19 +5,19 @@
+  dependency2.from=Autohaus
+  dependency2.to=Auto
+  dependency2.type=UsesDependency
+--editor.fx.0.height=1087
+--editor.fx.0.width=942
+--editor.fx.0.x=921
+++editor.fx.0.height=0
+++editor.fx.0.width=0
+++editor.fx.0.x=0
+  editor.fx.0.y=0
+- objectbench.height=103
++ objectbench.height=66
+ -objectbench.width=889
+ +objectbench.width=902
+  package.divider.horizontal=0.6
+- package.divider.vertical=0.7539149888143176
+- package.editor.height=330
+- package.editor.width=812
++ package.divider.vertical=0.8366890380313199
+ -package.editor.height=367
+ -package.editor.width=812
+++package.editor.height=354
+++package.editor.width=799
+  package.editor.x=0
+  package.editor.y=0
+  package.frame.height=547

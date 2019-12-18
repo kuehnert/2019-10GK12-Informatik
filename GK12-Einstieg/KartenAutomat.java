@@ -31,12 +31,12 @@ public class KartenAutomat {
         // Der Benutzer wirft nacheinander Euro-Münzen oder Scheine ein
         // bis genügend Geld eingeworfen wurde
         while (einbezahlterBetrag < gesamtpreis) {
-            System.out.println("Es fehlen noch " + 
+            System.out.println("Es fehlen noch " +
                 (gesamtpreis - einbezahlterBetrag) + " €.");
             System.out.print("Welche Münze oder welchen Schein " +
                 "werfen Sie ein? ");
             int wert = tastaturEingabe.nextInt();
-            
+
             // Wenn wert 5 ist oder wert gleich 10 ist...
             if (wert == 1 || wert == 2 || wert == 5 || wert == 10 ||
                 wert == 20 || wert == 50 || wert == 100) {
@@ -54,11 +54,11 @@ public class KartenAutomat {
 
     public void gibWechselgeld() {
         int wechselgeld = einbezahlterBetrag - gesamtpreis;
-        
+
         if (wechselgeld > 0) {
-            System.out.println("Sie bekommen noch " + wechselgeld 
+            System.out.println("Sie bekommen noch " + wechselgeld
                 + " € zurück.");
-            
+
             // TODO: Gib Wechselgeld in echten Scheinen/Münzen
             // gestückelt zurück
             // 100, 50, 20, 10, 5, 2, 1
@@ -78,7 +78,7 @@ public class KartenAutomat {
     public void druckeKarte() {
         System.out.println("#########################################");
         System.out.println("# Eine Karte fürs Phantaseeland         #");
-        System.out.println("#########################################\n"); 
+        System.out.println("#########################################\n");
         try { Thread.sleep(1000); } catch (Exception e) {}
     }
 
@@ -87,7 +87,7 @@ public class KartenAutomat {
         // Drucke eine Karte
         // Verringere die Anzahl noch zu druckender Karten um eins
         int gedruckteKarten = 0;
-        
+
         while (gedruckteKarten < anzahlKarten) {
             druckeKarte();
             gedruckteKarten = gedruckteKarten + 1;
@@ -95,7 +95,7 @@ public class KartenAutomat {
             " von " + anzahlKarten + " Karten gedruckt");
         }
     }
-    
+
     public void hauptprogramm() {
         zeigeMenu();
         ermittleAnzahl();

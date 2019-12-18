@@ -1,0 +1,17 @@
+diff a/GK12-Einstieg/KartenAutomat.java b/GK12-Einstieg/KartenAutomat.java	(rejected hunks)
+@@ -15,6 +15,15 @@
+          hauptprogramm();
+      }
+  
+++<<<<<<< Updated upstream
+++=======
++     public void druckeKarte() {
++         System.out.println("#########################################");
++         System.out.println("# Eine Karte fürs Phantaseeland         #");
++         System.out.println("#########################################"); 
++     }
++ 
+++>>>>>>> Stashed changes
+      public void zeigeMenu() {
+          einbezahlterBetrag = 0;
+  
