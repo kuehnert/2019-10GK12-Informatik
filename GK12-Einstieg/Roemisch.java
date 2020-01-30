@@ -107,7 +107,7 @@ public class Roemisch {
         return ausgabe;
     }
 
-    public void testeRoemischSubtract() {
+    private void test() {
         int zahl; 
         String gewuenscht;
         String ergebnis;
@@ -123,30 +123,12 @@ public class Roemisch {
             System.out.println("Erwartet: " + gewuenscht);
             System.out.println("Erhalten: " + ergebnis);
         }
-       
-        zahl = 10;
-        gewuenscht = "X";
-        ergebnis = toRomanSubtract(zahl);
-        
-        if (gewuenscht.equals(ergebnis)) {
-            System.out.print(".");
-        } else {
-            System.out.println("\nFehler bei " + zahl);
-            System.out.println("Erwartet: " + gewuenscht);
-            System.out.println("Erhalten: " + ergebnis);
-        }
-       
-        zahl = 35;
-        gewuenscht = "XXXV";
-        ergebnis = toRomanSubtract(zahl);
-        
-        if (gewuenscht.equals(ergebnis)) {
-            System.out.print(".");
-        } else {
-            System.out.println("\nFehler bei " + zahl);
-            System.out.println("Erwartet: " + gewuenscht);
-            System.out.println("Erhalten: " + ergebnis);
-        }
+    }
+    
+    public void testeRoemischSubtract() {
+        test("MMMCMXCIX", toRomanSubtract(3999));
+        test("XXXV", toRomanSubtract(35));
+        test("X", toRomanSubtract(10));
     }
 
     public int toArabic(String roemisch) {
@@ -173,4 +155,16 @@ public class Roemisch {
         System.out.println(r + ": " + toArabic(r) );
     }
 
+    /*
+     * Aufgaben:
+     * 1. Gleichen Sie den Stand Ihres Programms an
+     * 2. Lagern Sie den Test in eine eigene Methode
+     *    test(erwartet, erhalten) 
+     *    aus, die Sie etwa mit
+     *    test("XC", toRomanSubtract(90));
+     *    aufrufen
+     * 3. Ergänzen Sie 5 Tests für weitere Zahlen
+     * 4. Erstellen Sie eine analoge Testmethode für
+     *    testeToArabic()
+     */
 }
