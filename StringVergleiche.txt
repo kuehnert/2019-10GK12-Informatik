@@ -1,0 +1,34 @@
+String-Vergleiche
+
+Da in einer String-Variablen zunächst nicht der Inhalt, sondern nur ihre Speicheradresse gespeichert ist, führt ein Vergleich mit "==" oft zu einem falschen Ergebnis.
+
+  String a = "Hallo";
+  String b = "Ha" + "llo";
+  a == b // => false, da Speicheradressen unterschiedlich sind
+
+Lösung: Man  vergleicht String mit der Methode equals():
+
+  a.equals(b) // => true
+
+"equals" vergleicht Strings wirklich Zeichen für Zeichen.
+
+------------
+
+"equals" steht für jedes Objekt in Java zur Verfügung, weil jede Klasse implizit von der Klasse Object erbt, in der die Methoden toString() und equals() definiert sind.
+
+------------
+
+Es gibt zusätzlich die Methode equalsIgnoreCase, welche Strings unabhängig von Groß-/Kleinschreibung vergleicht.
+
+  String c = "Der Groesste";
+  String d = "DER GROESSTE";
+  c.equals(d) // => false
+  c.equalsIgnoreCase(d) // => true
+
+---------
+
+Tippe: "Informatik ist geil"
+Eingabe: Iformatik ist goil
+==> Du hast richtig getippt :D
+==> Du hast Groß-/Kleinschreibung nicht beachtet :-[
+==> Du kannst nicht tippen. ;(
