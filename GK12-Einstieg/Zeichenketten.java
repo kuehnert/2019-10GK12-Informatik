@@ -75,3 +75,17 @@ public class Zeichenketten {
  * 2. Schreibe analog eine Methode, die jedes 2. Zeichen
  *    eines Texts ausgibt. Aus "Hollywood" wird "Hlyod"
  */
+
+/*
+ * Weitere Aufgaben:
+ * 1. Besprechen die Hausaufgaben
+ *  
+ * 2. Schreiben Sie eine Methode „boolean istVokal(char zeichen)“,
+ *    und zurückgibt, ob es sich dabei um einen Vokal handelt oder nicht
+ *  
+ * 3, Chinesen pimpen:
+ *    a. unterscheiden nach Groß-Klein-Schreibung
+ *       "Ächzen" => "Öchzön"
+ *    b. Diphotonge (Doppelvokale):
+ *       ´"Drei" => "Drö"
+ */
