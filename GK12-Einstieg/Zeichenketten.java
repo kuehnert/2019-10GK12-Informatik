@@ -1,4 +1,54 @@
 public class Zeichenketten {
+    private String vokaleKlein = "aeiouäöü";
+    private String vokaleGross = vokaleKlein.toUpperCase();
+    private String vokale = vokaleKlein + vokaleGross;
+
+    public boolean enthaelt(String s, char c) {
+        for (int i = 0; i < s.length(); i = i + 1) {
+            if (c == s.charAt(i) ) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public boolean istGrosserVokal(char c) {
+        return enthaelt(vokaleGross, c);
+    }
+
+    public boolean istKleinerVokal(char c) {
+        return enthaelt(vokaleKlein, c);
+    }
+
+    public boolean istVokal(char c) {
+        return enthaelt(vokale, c);
+    }
+
+    public void testIstVokal() {
+        test(true, istVokal('a'));
+        test(true, istVokal('ö'));
+        test(true, istVokal('p'));
+        test(false, istVokal('!'));
+        test(false, istVokal(' '));
+    }
+
+    // "Hallo!" => 0.4
+    public double anteilVokale(String t) {
+        // ? Machen Sie mal!
+        return 0.0;
+    }
+    
+    public String doubleInProzent(double d) {
+        return String.format("%f %%", d);
+    }
+    
+    public void testAnteilVokale() {
+        test("60 %", doubleInProzent(anteilVokale("Hallo")));
+        test("0 %", doubleInProzent(anteilVokale("Hhhhh")));       
+        test("100 %", doubleInProzent(anteilVokale("Aaaaaaaaaaa")));       
+    }
+    
     public String kopiere(String input) {
         String output = "";
 
@@ -40,7 +90,7 @@ public class Zeichenketten {
 
     // 1. 2. Param für das Ersatzzeichen
     // 2. Chinesen mit dem Kontrabaß
-    
+
     public void testeKopiere() {
         test("", kopiere(""));
         test("Hallo", kopiere("Hallo"));
@@ -49,7 +99,7 @@ public class Zeichenketten {
         test("", reverse(""));
         test("Hallo", reverse("ollaH"));
         test("ABCDEFG", reverse("GFEDCBA"));
-        
+
         test("XNDX", ersetze("ENDE", 'E'));
         test("TNDT", ersetze("ENDE", 'E'));
     }
@@ -58,15 +108,15 @@ public class Zeichenketten {
         if (gewuenscht.equals(ergebnis)) {
             System.out.print(".");
         } else {
-            System.out.println("\nFEHLER ");
-            System.out.println("Erwartet: " + gewuenscht);
-            System.out.println("Erhalten: " + ergebnis);
+            System.out.print("FEHLER ");
+            System.out.print("Erwartet: " + gewuenscht);
+            System.out.println(", erhalten: " + ergebnis);
         }
     }
 }
 
 /*
- * Hausaufgaben:
+ * Hausaufgaben: ✔
  * 
  * 1. Schreibe nach dem Muster oben eine Methode
  *    reverse(), die einen String rückwärts zurückgibt
