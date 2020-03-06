@@ -1,3 +1,10 @@
+/**
+ * Hausaufgaben
+ * Caesar entschlüsseln: Das Entschlüsseln ist das Gleiche wie
+ * eine Verschlüsselung mit negativen Key.
+ * D.h. a == caesar( caesar(a, 10), -10 )
+ */
+
 public class Verschluesssung {
     private char caesarBuchstabe(char zeichen, int key) {
         // Type casting: (double) 5.5f; 
