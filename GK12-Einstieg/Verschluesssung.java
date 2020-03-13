@@ -44,11 +44,34 @@ public class Verschluesssung {
         String out = "";
         input = input.toUpperCase();
         
+        for (int i = 0; i < input.length(); i += 1) {
+            char c = input.charAt(i);
+            if (c >= 'A' && c <= 'Z') {
+                out += c;
+            } else if (c == 'Ä') {
+                out += "AE";
+            } else if (c == 'Ö') {
+                out += "OE";
+            } else if (c == 'Ü') {
+                out += "UE";
+            } 
+        }
+        
+        return out;
     }
 
+    public static String blockify(String input) {
+        // Hausaufgabe für die nicht vom Pferd gefallenen
+        // und Corona-Virus-Patientjetztinundinnen
+        // input = "ABCDEFGHIJKL"
+        return "ABCDE FGHIJ KL";
+    }
+    
     public void testCaesar() {
         Utils.test("PQRSTUFGHIJKLMNO", caesar("ABCDEFQRSTUVWXYZ", 15) );
-        Utils.test("Ebt jtu (!) 2 Ivoe?", caesar("Das ist (!) 1 Hund?", 1) );
         Utils.test("ABCDEFQRSTUVWXYZ", decaesar("PQRSTUFGHIJKLMNO", 15) );
+        Utils.test("DASISTHUND", clean("Das ist (!) 1 Hund?") );
+        Utils.test("", clean(",.-#+)0=&\"/732189") );
+        Utils.test("UEOEAESSUEOEAE", clean("üöäßÜÖÄ") );
     }
 }
